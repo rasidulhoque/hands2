@@ -1,0 +1,50 @@
+body{
+  background-color: yellow;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+.admin{
+  margin-top: 500px;
+  margin-right:300px;
+}
+.user{
+  margin-top: 500px;
+  margin-left:300px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.btn{
+  padding: 20px 50px;
+  font-size: large;
+}
+
+.admin > .btn{
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+}
+.admin > .btn:hover{
+  background-color: rgb(37, 37, 241);
+  
+}
+.user > .btn{
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+}
+.user > .btn:hover{
+  background-color: rgb(25, 209, 25);
+ 
+}

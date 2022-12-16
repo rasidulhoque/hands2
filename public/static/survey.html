@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="max-w-2xl mx-4">
+
+        <nav class="border-gray-200 ">
+          <div class="container mx-auto flex mb-3">
+            <a href="#" class="flex h-20 mt-3 ">
+              <img
+                src="https://helios-i.mashable.com/imagery/articles/00j2IyDECgznTprGkXiQHVT/hero-image.fill.size_1248x702.v1614273999.jpg"
+                class="rounded border-gray-100" alt="">
+            </a>
+            <div class="" id="">
+              <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-6 md:text-sm md:font-medium">
+                <li>
+                  <a href="#"
+                    class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none"
+                    aria-current="page">Home</a>
+                </li>
+                <li>
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Options
+                    <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownNavbar"
+                    class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="/login" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Login</a>
+                      </li>
+                      <li>
+                        <a href="/signup" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Signup</a>
+                      </li>
+                    </ul>
+                    <div class="py-1">
+                      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Galary</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    
+      </div>
+    
+      <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+    
+    
+    <div class="bg-yellow-200">
+        <h1 class="text-center text-2xl mt-2 font-semibold">HOME VISIT SURVEY</h1>
+        <!-- component -->
+        <div class="flex items-center justify-center p-12">
+            <!-- Author: FormBold Team -->
+            <!-- Learn More: https://formbold.com -->
+            <div class="mx-auto w-full max-w-[550px]">
+                <form action="/worker/survey" method="POST">
+
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold ">Area ID: </label>
+                        <input type="text" name="area_id" id="area_id">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold">House Number: </label>
+                        <input type="text" name="hno" id="hno">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold">Pregnant Women:</label>
+                        <input type="checkbox" value="yes" name="pragnantWomen" id="pragnantWomen"
+                            onclick="enabletextbox()" autocomplete="off" /> Yes <input type="checkbox" value="no"
+                            name="pragnantWomen" autocomplete="off" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="p_name" style="display: none">Name: </label>
+                        <input type="text" name="pname" id="pname" style="display: none" placeholder="name">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="page" style="display: none">Age: </label>
+                        <input type="text" name="page" id="p_age" style="display: none" placeholder="age">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="pweight" style="display: none">Weight: </label>
+                        <input type="text" name="pweight" id="p_weight" style="display: none" placeholder="weight">
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="precMed" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive Government Medicine:</label>
+                        <input type="radio" name="p_rec_govt" value="yes" /> Yes <input type="radio" name="p_rec_govt"
+                            value="no" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="precPerMed" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive Periodical Medical Aid:</label>
+                        <input type="radio" name="p_rec_per_med" value="yes" /> Yes <input type="radio"
+                            name="p_rec_per_med" value="no" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="husbandName" style="display: none">Husband Name:
+                        </label>
+                        <input type="text" name="husname" id="husname" style="display: none" placeholder="Husband name">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="phoneNumber" style="display: none">Phone Number:
+                        </label>
+                        <input type="text" name="p_ph" id="p_ph" style="display: none" placeholder="Phone Number">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="monPreg" style="display: none">Months of
+                            Pregnancy</label>
+                        <input type="text" name="p_month" id="p_month" style="display: none"
+                            placeholder="Month of Pregnancy">
+                        <button class="bg-blue-600 px-2 rounded-sm" id="button1" style="display: none">+</button>
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold">Lactating Mother:</label>
+                        <input type="checkbox" value="yes" name="Lactatingmother" id="Lactatingmother"
+                            onclick="checkBox2()" autocomplete="off" /> Yes <input type="checkbox" value="No"
+                            name="Lactatingmother" autocomplete="off" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="lname" style="display: none">Name: </label>
+                        <input type="text" name="L_name" id="L_name" style="display: none" placeholder="Name">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="lage" style="display: none">Age: </label>
+                        <input type="text" name="l_age" id="l_age" style="display: none" placeholder="age">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="lweight" style="display: none">Weight: </label>
+                        <input type="text" name="l_weight" id="l_weight" style="display: none" placeholder="weight">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="lmonth" style="display: none">Months: </label>
+                        <input type="text" name="l_month" id="l_month" style="display: none" placeholder="month">
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="lrecFood" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive food from AWC:</label>
+                        <input type="radio" value="yes" name="l_rec_food" /> Yes <input type="radio" value="no"
+                            name="l_rec_food" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="lrecMed" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive Medicine:</label>
+                        <input type="radio" value="yes" name="l_rec_med" /> Yes <input type="radio" value="No"
+                            name="l_rec_med" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold mr-5">Children(0-5Y):
+                        </label>
+                        <input type="checkbox" value="yes" name="children" id="children" onclick="checkBox3()"
+                            autocomplete="off" /> Yes <input type="checkbox" value="no" name="children"
+                            autocomplete="off" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="cname" style="display: none">Name: </label>
+                        <input type="text" name="c_name" id="c_name" style="display: none" placeholder="name"
+                            autocomplete="off">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="cAge" style="display: none">Age: </label>
+                        <input type="text" name="c_age" id="c_age" autocomplete="off" placeholder="age"
+                            style="display: none">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="cHeight" style="display: none">Height: </label>
+                        <input type="text" name="c_height" id="c_height" style="display: none" placeholder="height"
+                            autocomplete="off">
+                    </div>
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold" id="cWeight" style="display: none">Weight: </label>
+                        <input type="text" name="c_weight" id="c_weight" style="display: none" autocomplete="off"
+                            placeholder="weight">
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="goesto" style="display: none">
+                        <label for="" class="font-medium font-bold">Goes To: </label>
+                        <br>
+                        <label for="">Aanganwadi</label>
+                        <input type="checkbox" name="goesto" value="aganwadi">
+                        <br>
+                        <label for="">Nursery School</label>
+                        <input type="checkbox" name="goesto" value="nersery">
+                        <br>
+                        <label for="">None</label>
+                        <input type="checkbox" name="goesto" value="none">
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="crecVacc" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive Vaccine:</label>
+                        <input type="radio" name="c_rec_vacc" value="yes" /> Yes <input type="radio" name="c_rec_vacc"
+                            value="no" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="crecMed" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive Medicine:</label>
+                        <input type="radio" name="c_rec_med" value="yes" /> Yes <input type="radio" name="c_rec_med"
+                            value="no" /> No
+                        <button class="bg-blue-600 px-2 rounded-sm">+</button>
+                    </div>
+
+                    <div class="r1 space-x-4 my-5">
+                        <label for="" class="font-medium font-bold mr-9">Aged People(above 70Y):</label>
+                        <input type="checkbox" name="aged" value="yes" id="aged" onclick="checkBox4()"
+                            autocomplete="off" /> Yes <input type="checkbox" name="aged" value="no"
+                            autocomplete="off" /> No
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="aName" style="display: none">
+                        <label for="" class="font-medium font-bold">Name: </label>
+                        <input type="text" name="aged_name" autocomplete="odd" placeholder="name">
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="aAge" style="display: none">
+                        <label for="" class="font-medium font-bold">Age: </label>
+                        <input type="text" name="aged_age" placeholder="age" autocomplete="off">
+                    </div>
+                    <div class="r1 space-x-4 my-5" id="aRecMed" style="display: none">
+                        <label for="" class="font-medium font-bold">Receive Medical Aid:</label>
+                        <input type="radio" name="a_rec_med" value="yes" />Yes <input type="radio" name="a_rec_med"
+                            value="no" />No
+                        <button class="bg-blue-600 px-2 rounded-sm">+</button>
+                    </div>
+                    <!-- <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-5 mx-auto">
+
+                        <div class="flex flex-wrap -m-4">
+                            <div class="p-4  w-full">
+                                <div class="h-full bg-gray-100 p-8 rounded">
+
+                                    <h1 class="font-semibold text-xl">Survey Done By</h1>
+                                    <br>
+                                    <p>
+                                        Worker Name : Rakesh Sharma
+                                        <br>
+                                        Worker ID : rakeshSharma123
+                                        <br>
+                                        Phone Number : 91230XXXXX
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section> -->
+                    <div class="flex space-x-2 justify-center">
+                        <button type="submit"
+                            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function enabletextbox() {
+            var pragnantWomen = document.getElementById("pragnantWomen");
+
+            if (pragnantWomen.checked == true) {
+                pname.style.display = "block";
+                p_name.style.display = "block";
+                page.style.display = "block";
+                p_age.style.display = "block";
+                p_weight.style.display = "block";
+                pweight.style.display = "block";
+                precMed.style.display = "block";
+                precPerMed.style.display = "block";
+                husname.style.display = "block";
+                husbandName.style.display = "block";
+                p_ph.style.display = "block";
+                phoneNumber.style.display = "block";
+                monPreg.style.display = "block";
+                p_month.style.display = "block";
+                button1.style.display = "block";
+            } else {
+                pname.style.display = "none";
+                p_name.style.display = "none";
+                page.style.display = "none";
+                p_age.style.display = "none";
+                pweight.style.display = "none";
+                p_weight.style.display = "none";
+                precMed.style.display = "none";
+                precPerMed.style.display = "none";
+                husname.style.display = "none";
+                husbandName.style.display = "none";
+                p_ph.style.display = "none";
+                phoneNumber.style.display = "none";
+                p_month.style.display = "none";
+                monPreg.style.display = "none";
+                button1.style.display = "none";
+            }
+        }
+        function checkBox2() {
+            var Lactatingmother = document.getElementById("Lactatingmother");
+            if (Lactatingmother.checked == true) {
+                lname.style.display = "block";
+                L_name.style.display = "block";
+                lage.style.display = "block";
+                l_age.style.display = "block";
+                lweight.style.display = "block";
+                l_weight.style.display = "block";
+                lmonth.style.display = "block";
+                l_month.style.display = "block";
+                lrecMed.style.display = "block";
+                lrecFood.style.display = "block";
+
+
+            } else {
+                lname.style.display = "none";
+                L_name.style.display = "none";
+                lage.style.display = "none";
+                l_age.style.display = "none";
+                lweight.style.display = "none";
+                l_weight.style.display = "none";
+                lmonth.style.display = "none";
+                l_month.style.display = "none";
+                lrecMed.style.display = "none"
+                lrecFood.style.display = "none";
+
+            }
+        }
+
+        function checkBox3() {
+            var children = document.getElementById("children");
+            if (children.checked == true) {
+                cname.style.display = "block";
+                c_name.style.display = "block";
+                c_age.style.display = "block";
+                cAge.style.display = "block";
+                c_height.style.display = "block";
+                cHeight.style.display = "block";
+                c_weight.style.display = "block";
+                cWeight.style.display = "block";
+                goesto.style.display = "block";
+                crecVacc.style.display = "block";
+                crecMed.style.display = "block";
+            } else {
+                cname.style.display = "none";
+                c_name.style.display = "none";
+                c_age.style.display = "none";
+                cAge.style.display = "none";
+                c_height.style.display = "none";
+                cHeight.style.display = "none";
+                c_weight.style.display = "none";
+                cWeight.style.display = "none";
+                goesto.style.display = "none";
+                crecVacc.style.display = "none";
+                crecMed.style.display = "none";
+            }
+        }
+        function checkBox4() {
+            var aged = document.getElementById('aged')
+            if (aged.checked == true) {
+                aName.style.display = "block";
+                aAge.style.display = "block";
+                aRecMed.style.display = "block";
+            } else {
+                aName.style.display = "none";
+                aAge.style.display = "none";
+                aRecMed.style.display = "none";
+            }
+        }
+    </script>
+    </div>
+</body>
+
+</html>

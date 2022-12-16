@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="max-w-2xl mx-4">
+
+        <nav class="border-gray-200 ">
+            <div class="container mx-auto flex items-center justify-between">
+                <a href="#" class="flex h-20 mt-3 ">
+                    <img src="https://helios-i.mashable.com/imagery/articles/00j2IyDECgznTprGkXiQHVT/hero-image.fill.size_1248x702.v1614273999.jpg"
+                        class="rounded border-gray-100" alt="">
+                </a>
+                <button type="button"
+                    class="md:hidden ml-3 text-gray-400 hover:text-gray-900 rounded-lg inline-flex items-center justify-center">
+                    <!-- <span class="sr-only">Open main menu</span> -->
+                </button>
+                <div class="" id="">
+                    <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-6 md:text-sm md:font-medium">
+                        <li>
+                            <a href="/"
+                                class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Options
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                                <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="/login"
+                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="/signup"
+                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Signup</a>
+                                    </li>
+                                </ul>
+                                <div class="py-1">
+                                    <a href="/logout"
+                                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign
+                                        out</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Galary</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
+
+    <div class="container flex justify-between">
+
+        <div class="left">
+
+
+            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+                <div
+                    class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <h1
+                            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                            Welcome to the worker interface
+                        </h1>
+                        <form class="space-y-4 md:space-y-6">
+                            <div>
+                                <a href="/worker/edit_profile"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  hover:bg-violet-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">Edit
+                                    Your own profile </a>
+                            </div>
+                            <div>
+                                <a href="/worker/survey"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  hover:bg-violet-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">Home
+                                    visit Survey</a>
+                            </div>
+
+                            <div>
+                                <a href="/worker/viewArea"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  hover:bg-violet-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">View
+                                    your allotted area</a>
+                            </div>
+                            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                                "With great power comes great responsibility"
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- >Edit own profile</a><br><br>
+        >survey</a><br><br>
+        >view area</a>
+    <a href="/">View Area</a> -->
+
+
+
+        <!-- <div class="right flex flex-col bg-blue-500 w-[420px] h-[750px] justify-center items-center space-y-5 rounded-lg mt-32 mr-5 opacity-75 shadow-xl shadow-blue-500/40">
+
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u>firsnane</u></h2>
+            <h2 id="firstname" class="flex bg-gray-200 rounded-lg h-[40px] w-[350px] justify-center items-center">name</h2>
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u>lastname</u></h2>
+            <h3 id="lastname">name</h3>
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u>gender</u></h2>
+            <h4 id="gender">name</h4>
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u>age</u></h2>
+            <h5 id="age">name</h5>
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u> email</u></h2>
+            <h6 id="email">name</h6>
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u>phone</u></h2>
+            <h7 id="phone">name</h7>
+            <h2 class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center"><u>areaId</u></h2>
+            <h8 id="area_id">name</h8>
+        </div> -->
+        <div
+            class="right flex flex-col bg-blue-500 w-[420px] h-[500px] justify-center items-center space-y-5 rounded-lg mt-32 mr-5 opacity-75 shadow-xl shadow-blue-500/40">
+            <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">FirstName: </h2>
+                <h2 id="firstname">&nbsp; name</h2>
+            </div>
+
+            <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">LastName: </h2>
+                <h2 id="lastname">&nbsp; name</h2>
+            </div>
+            <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">Gender: </h2>
+                <h2 id="gender">&nbsp; name</h2>
+            </div>
+             <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">Age: </h2>
+                <h2 id="age">&nbsp; name</h2>
+            </div>
+            <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">Email: </h2>
+                <h2 id="email">&nbsp; name</h2>
+            </div>
+            <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">Phone Number: </h2>
+                <h2 id="phone">&nbsp; name</h2>
+            </div>
+            <div class="flex bg-blue-200 rounded-lg h-[40px] w-[350px] justify-center items-center">
+                <h2 class="text-red-600">Area ID: </h2>
+                <h2 id="area_id">&nbsp; name</h2>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <script>
+
+        let firstname = document.getElementById('firstname')
+        let lastname = document.getElementById('lastname')
+        let gender = document.getElementById('gender')
+        let age = document.getElementById('age')
+        let email = document.getElementById('email')
+        let phone = document.getElementById('phone')
+        let area_id = document.getElementById('area_id')
+
+        console.log("url")
+
+        const fetchData = async () => {
+
+            const response = await fetch('http://localhost:4000/worker/fetch_profile', {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                },
+                credentials: 'same-origin',
+                referrerPolicy: 'strict-origin-when-cross-origin'
+            })
+                .then(response => response.json()
+                    .then((jsonResponse) => {
+
+                        firstname.innerHTML = jsonResponse[0].firstname
+                        lastname.innerHTML = jsonResponse[0].lastname
+                        gender.innerHTML = jsonResponse[0].gender
+                        age.innerHTML = jsonResponse[0].age
+                        email.innerHTML = jsonResponse[0].email
+                        phone.innerHTML = jsonResponse[0].phone
+                        area_id.innerHTML = jsonResponse[0].area_id
+                        console.log(jsonResponse[0]._id)
+                    }))
+                .then(response => JSON.stringify(response))
+
+            return response;
+        }
+
+        fetchData();
+
+    </script>
+
+</body>
+
+</html>
